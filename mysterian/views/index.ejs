@@ -1,0 +1,158 @@
+<%- include('./partials/header',{title:'Signup'}); -%>
+
+    <div class="container">
+        <div class="sign" name="">
+
+            <form action="login" method="POST" class="sign-in">
+                <h2 class="title">Sign in</h2>
+                <div class="inputs">
+                    <i class="fas fa-user"></i>
+                    <input type="Username" placeholder="Username" name="username" required>
+                </div>
+                <div class="inputs">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+
+                <input type="submit" name="signin" value="Login" class="btn">
+                <p style="color:red;">
+                    <%=(typeof alertMsg!='undefined')? alertMsg:''%>
+                </p>
+                <p class=" social-text "> Or Sign in with social platform</p>
+                <div class="social-media ">
+                    <a href="# " class="social-icon "> <i class="fab fa-facebook "></i> </a>
+                    <a href=" " class="social-icon "> <i class="fab fa-twitter "></i> </a>
+                    <a href=" " class="social-icon "> <i class="fab fa-google "></i> </a>
+                    <a href=" " class="social-icon "> <i class="fab fa-linkedin-in "></i> </a>
+                </div><br>
+
+                <a href="#myForm " onclick="openForm1() ">
+                    <font color="black "> Forgot password?</font>
+                </a>
+                <p class="account-text ">Don't have an account? <a href="# " id="sign-up-btn2 ">Sign-up</a> </p>
+            </form>
+
+            <form action="register " method="POST " class="sign-up ">
+                <h2 class="title ">Sign up</h2>
+                <div class="inputs ">
+                    <i class="fas fa-user "></i>
+                    <input type="Username " placeholder="username " name="username " required>
+                </div>
+                <div class="inputs ">
+                    <i class="fas fa-envelope "></i>
+                    <input type="email " id="email " placeholder="Email " name="email " required>
+                </div>
+                <div class="inputs ">
+                    <i class="fas fa-lock "></i>
+                    <input type="password " placeholder="Password " name="password " id="password " required>
+                </div>
+                <div class="inputs ">
+                    <i class="fas fa-lock "></i>
+                    <input type="password " placeholder="Confirm Password " name="password2 " id="password2 " required>
+                </div>
+                <p style="color:red;">
+                    <%=(typeof alertMsg!='undefined')? alertMsg:''%>
+                </p>
+                <span id="msg"></span>
+                <input type="submit" name="signup" value="Sign up" class="btn">
+                <p class="social-text"> Or Sign up with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-google"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-linkedin-in"></i> </a>
+                </div>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign-in</a> </p>
+            </form>
+
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content" id="signup">
+                    <h3>Already have an account? </h3>
+                    <button class="btn" id="sign-in-btn" name="submit1">Sign in</button>
+                </div>
+                <div>
+                    <img src="/images/signin.svg" alt="signin " class="image">
+                </div>
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New to Mysteria Restaurant </h3>
+                    <p>Get started with creating your free account</p>
+                    <button class="btn" id="sign-up-btn" name="submit2">Sign up</button>
+
+                </div>
+                <div>
+                    <img src="/images/signup.svg" alt=" signup" class="image">
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--
+    <div class="form-popup form-container" id="myForm">
+
+        <form action="" method="GET">
+            <div class="pass_reset" id="pass_reset1">
+                <h2 class="title" id="Res_title4">Password Resetting form</h2>
+
+                <div class="inputs">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="insert username or email" name="srchUser" required>
+                </div>
+                <button type="submit" id="cl_btn2" class="btn" name="sub_btn4">search</button>
+
+            </div>
+        </form>
+
+        <form action="" method="GET">
+            <div class="pass_reset" id="pass_reset4">
+                <h2 class="title" id="Res_title1">choose your account</h2>
+
+                <button type="submit" id="cl_btn1" class="btn" name="sub_btn1">Submit</button>
+            </div>
+        </form>
+
+        <form action="" id="sendCode" method="GE">
+            <div class="pass_reset" id="pass_reset2">
+                <h2 class="title" id="Res_title2">Password Resetting form</h2>
+
+                <button type="submit" id="cl_btn2" class="btn" name="sub_btn2" value="">Submit</button>
+                <button type="button" class="btn cancel" id="bt_close" onclick="closeForm()">&times;</button>
+            </div>
+        </form>
+
+
+        <form action="mail/sendcode.php" method="GET" onsubmit="return confPsd2()">
+            <div class="pass_reset" id="pass_reset3">
+
+                <h2 class="title" id="Res_title3">Password Resetting form</h2>
+
+                ?>
+
+                <div class="inputs">
+                    <i class="fas fa-envelope"></i>
+                    <input type="text" placeholder="New Username" name="newUser" required>
+                </div>
+                <div class="inputs">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="New Password" name="newPassword" id="password3" required>
+                </div>
+                <div class="inputs">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm New Password" name="Password2" id="password4" required>
+
+                </div>
+                <span id="msg2"></span>
+                <button type="submit" id="cl_btn3" name="sub_btn3" class="btn" value="">Submit</button>
+
+            </div>
+        </form>
+
+        <button type="button" class="btn cancel" id="bt_close" onclick="closeForm()">&times;</button>
+    </div>-->
+    <%- include('./partials/footer'); -%>
