@@ -1,4 +1,4 @@
-<%- include('./partials/header',{title:'Signup'}); -%>
+<%- include('./partials/signup_header',{title:'Signup'}); -%>
 
     <div class="container">
         <div class="sign" name="">
@@ -13,46 +13,49 @@
                     <i class="fas fa-lock"></i>
                     <input type="password" placeholder="Password" name="password" required>
                 </div>
-
-                <input type="submit" name="signin" value="Login" class="btn">
-                <p style="color:red;">
+                <label class="float-left" style="font-weight: normal">
+                    <input type="checkbox" name="checkbox"> Remember Me
+                </label>
+                <span style="color:red;">
                     <%=(typeof alertMsg!='undefined')? alertMsg:''%>
-                </p>
-                <p class=" social-text "> Or Sign in with social platform</p>
-                <div class="social-media ">
-                    <a href="# " class="social-icon "> <i class="fab fa-facebook "></i> </a>
-                    <a href=" " class="social-icon "> <i class="fab fa-twitter "></i> </a>
-                    <a href=" " class="social-icon "> <i class="fab fa-google "></i> </a>
-                    <a href=" " class="social-icon "> <i class="fab fa-linkedin-in "></i> </a>
+                </span>
+                <span style="color:green;">
+                    <%=(typeof alertMsg2!='undefined')? alertMsg2:''%>
+                </span>
+                <input type="submit" name="signin" value="Login" class="btn">
+                <p class="social-text"> Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon"> <i class="fab fa-facebook"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-twitter"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-google"></i> </a>
+                    <a href="" class="social-icon"> <i class="fab fa-linkedin-in"></i> </a>
                 </div><br>
 
-                <a href="#myForm " onclick="openForm1() ">
-                    <font color="black "> Forgot password?</font>
+                <a href="#myForm" onclick="openForm1()">
+                    <font color="black"> Forgot password?</font>
                 </a>
-                <p class="account-text ">Don't have an account? <a href="# " id="sign-up-btn2 ">Sign-up</a> </p>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign-up</a> </p>
             </form>
 
-            <form action="register " method="POST " class="sign-up ">
-                <h2 class="title ">Sign up</h2>
-                <div class="inputs ">
-                    <i class="fas fa-user "></i>
-                    <input type="Username " placeholder="username " name="username " required>
+            <form action="register" method="POST" class="sign-up">
+                <h2 class="title">Sign up</h2>
+                <div class="inputs">
+                    <i class="fas fa-user"></i>
+                    <input type="Username" placeholder="username" name="username" required>
                 </div>
-                <div class="inputs ">
-                    <i class="fas fa-envelope "></i>
-                    <input type="email " id="email " placeholder="Email " name="email " required>
+                <div class="inputs">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email" name="email" required>
                 </div>
-                <div class="inputs ">
-                    <i class="fas fa-lock "></i>
-                    <input type="password " placeholder="Password " name="password " id="password " required>
+                <div class="inputs">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
                 </div>
-                <div class="inputs ">
-                    <i class="fas fa-lock "></i>
-                    <input type="password " placeholder="Confirm Password " name="password2 " id="password2 " required>
+                <div class="inputs">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Confirm Password" name="password2" id="password2" required>
                 </div>
-                <p style="color:red;">
-                    <%=(typeof alertMsg!='undefined')? alertMsg:''%>
-                </p>
+
                 <span id="msg"></span>
                 <input type="submit" name="signup" value="Sign up" class="btn">
                 <p class="social-text"> Or Sign up with social platform</p>
