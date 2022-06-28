@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: rgb(56, 101, 99);
+    margin: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 70vw;
+    height: 120vh;
+    background: rgb(240, 243, 243);
+    border-radius: 5px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    top: auto;
+}
+
+.row {
+    text-align: left;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    min-width: 238px;
+    padding: 0 10px;
+}
+
+.inputs {
+    height: 50px;
+    background: #f0f0f0;
+    border: 2px rgb(93, 184, 180);
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 80%;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    border-radius: 50px;
+}
+
+.inputs i {
+    flex: 1;
+    text-align: center;
+    color: rgb(96, 96, 124);
+    font-size: 10px;
+}
+
+.inputs input {
+    flex: 5;
+    background: none;
+    border: none;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(93, 184, 180);
+}
+
+.verticalText {
+    writing-mode: sideways-rl;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 40px;
+    color: rgb(167, 218, 38);
+    text-transform: capitalize;
+    text-shadow: 3px 2px rgb(93, 184, 180);
+}
+
+label {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    text-transform: capitalize;
+    font-size: 25px;
+    float: left;
+    width: 50%;
+    margin-top: 40px;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(189, 60, 60);
+    resize: vertical;
+}
+
+.btn {
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background: rgb(93, 184, 180);
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: right;
+    padding: 12px 20px;
+}
+
+.btn:hover {
+    background: rgb(93, 184, 180);
+    box-shadow: 5px 5px 5px rgb(77, 77, 77);
+    transition: 0.3s;
+}
+
+.title {
+    font-size: 35px;
+    color: #000000;
+    margin-left: 45%;
+}

@@ -1,0 +1,181 @@
+body {
+    background-color: rgb(56, 101, 99);
+    margin: 10%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background-color .5s;
+    overflow: scroll;
+}
+
+p {
+    color: rgb(93, 184, 180);
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(13, 12, 12);
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+.headerNav {
+    top: 3%;
+    left: 15px;
+    right: 0;
+    display: block;
+    width: 100%;
+    transition: margin-left .5s;
+    z-index: 1;
+    padding: 15px;
+}
+
+.headerNav a,
+label {
+    color: rgb(93, 184, 180);
+    font-size: 20px;
+    left: 50px;
+    border-radius: 20px;
+    padding: 7px;
+    min-width: 20%;
+    text-decoration: none;
+}
+
+.headerNav a:hover {
+    color: black;
+    background-color: rgb(93, 184, 180);
+    opacity: 0.8;
+}
+
+#srchform {
+    position: relative;
+    top: 40%;
+    left: 2%;
+    padding: 0;
+    width: 50%;
+    float: right;
+}
+
+#srchbtn {
+    position: relative;
+    top: 4px;
+    left: 2%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .8);
+    border: solid 2px;
+    border-radius: 50%;
+}
+
+#srchbtn:hover {
+    transform: scale(110%, 110%);
+    background-color: rgba(20, 20, 20, .8);
+    box-shadow: 1px 1px 1px rgb(93, 184, 180);
+    border-color: rgb(93, 184, 180);
+    transition: 0.3s;
+}
+
+#srchbtn,
+#query {
+    box-shadow: 5px 5px 5px black;
+}
+
+#query {
+    position: relative;
+    border-radius: 18px;
+    border-color: rgb(93, 184, 180);
+    padding: 10px 10px;
+    margin: 2px 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, .65);
+    color: seashell;
+    height: 35px;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#query:focus {
+    width: 100%;
+}
+
+#srchimg {
+    max-width: 80%;
+    margin: 0;
+    padding: 0;
+    filter: invert(26%) sepia(89%) saturate(1583%) hue-rotate(1deg) brightness(96%) contrast(106%);
+}
+
+.queryStyle {
+    margin-top: 3px;
+    background: linear-gradient(-45deg, #520852, rgb(93, 184, 180));
+    height: 800px;
+    text-align: center;
+}
+
+.queryStyle a {
+    color: rgb(93, 184, 180);
+}
+
+select {
+    width: 17%;
+    padding: 15px;
+    border: 1px solid rgb(189, 60, 60);
+    resize: vertical;
+    margin-top: 5%;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(-45deg, rgb(93, 184, 180), #250e25);
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 5%;
+    margin-left: 50%;
+}
+
+.btn-success {
+    width: 300px;
+    height: 40px;
+    margin-left: 160px;
+}
+
+.btn:hover {
+    background: linear-gradient(-45deg, rgb(93, 184, 180), #520852);
+    box-shadow: 5px 5px 5px rgb(77, 77, 77);
+    transition: 0.3s;
+}
+
+#downbtn {
+    border-radius: 15px;
+    float: right;
+}
+
+#myProgress {
+    width: 70%;
+    background-color: grey;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+#myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+}
+
+.footer {
+    margin-top: 30px;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
+
+address {
+    color: rgb(93, 184, 180);
+}
