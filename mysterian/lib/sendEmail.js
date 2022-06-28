@@ -1,4 +1,5 @@
 var nodemailer = require('nodemailer');
+const notifier = require('node-notifier');
 
 //send email
 exports.sendingMail = (email, token)=> {
@@ -26,9 +27,9 @@ exports.sendingMail = (email, token)=> {
     mail.sendMail(mailOptions, function(error, info) {
         if (!error)
        
-            console.log('registration link sent');    
+            notifier.notify("registration link sent");   
 		else 
-			console.log ('there was an error while sending the link!');			
+			notifier.notify("there was an error while sending the link!");			
     });
 
     
