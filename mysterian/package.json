@@ -14,7 +14,6 @@
     "author": "Chere@AASTU",
     "license": "ISC",
     "dependencies": {
-        "alert": "^5.0.12",
         "bcrypt": "^5.0.1",
         "bcryptjs": "^2.4.3",
         "body-parser": "^1.20.0",
@@ -37,8 +36,8 @@
         "mysql": "^2.18.1",
         "mysql2": "^2.3.3",
         "nodemailer": "^6.7.5",
+        "nodemon": "^2.0.18",
         "path": "^0.12.7",
-        "popups": "^1.1.3",
         "rand-token": "^1.0.1"
     }
 }

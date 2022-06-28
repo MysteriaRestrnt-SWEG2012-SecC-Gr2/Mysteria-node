@@ -4,6 +4,7 @@ var router = express.Router();
 var randtoken = require('rand-token');
 const bcrypt = require('bcryptjs');
 var db = require('../config/db_Connection');
+const sendMail = require('../lib/sendEmail');
 // to display registration form 
 router.get('/register', function(req, res, next) {
     res.render('index');
@@ -13,7 +14,7 @@ router.post('/register', function(req, res, next) {
 
     inputData = {
 
-        user_name: req.body.username,
+        username: req.body.username,
         email: req.body.email,
         password: req.body.password,
         password2: req.body.password2
@@ -30,15 +31,18 @@ router.post('/register', function(req, res, next) {
 
             // save users data into database
             let hashedpassword = await bcrypt.hash(inputData.password, 8);
-            console.log(hashedpassword);
+            // console.log(hashedpassword);
 
-            db.query('INSERT INTO registration SET ?', { user_name: inputData.user_name, email: inputData.email, password: inputData.password }, (error, results) => {
+            const token = randtoken.generate(20);
+            const sent = sendMail.sendingMail(inputData.email, token);
+
+            db.query('INSERT INTO registration SET ?', { username: inputData.username, email: inputData.email, password: inputData.password }, (error, results) => {
                 if (error) {
                     console.log(error);
                 }
-                var msg = "Your are successfully registered";
+                var msg = "You are successfully registered";
             });
-            res.render('index', { alertMsg: msg });
+            res.render('index', { alertMsg2: msg });
         }
 
     });
