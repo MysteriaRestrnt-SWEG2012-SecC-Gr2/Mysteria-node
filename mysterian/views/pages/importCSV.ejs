@@ -1,0 +1,45 @@
+<%- include('../partials/header'); -%>
+
+    <body>
+        <%-include('../partials/navigation');-%>
+            <div class="container">
+                <div class="wrapper2">
+                    <div class="link">
+                        Download the CSV format
+                        <a href="http://localhost:5500/pages/download">HERE</a> before importing the records
+                    </div>
+
+                </div>
+                <div class="wrapper2">
+                    <h1 style="padding: 0px 230px  ">Import your file</h1>
+                    <div class="data">
+                        <form method="post" enctype="multipart/form-data">
+                            <div id="repoForm">
+                                <label style="padding:80px  ">Select File</label>
+                                <input type="file" name="csvFile" />
+                                <input type="submit" name="import" class="btns" value="Import" />
+                            </div>
+                        </form>
+                        <br />
+                        <br />
+                        <div class="output">
+                            <!-- <?php
+                                  echo $output;
+                                  ?> -->
+                            <span style="color: blue;"><%=(typeof impMsg!='undefined')? impMsg:''%></span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </body>
+    <footer class="footer">
+        <div id="btm" class="feedback col-3">
+            <address>
+                call: +251110000101<br> +251967882862
+            </address>
+            <p style="font-size:16px; text-align:center; ">Copyright &copy; Mysteria 2021/22, all rights reserved </p>
+        </div>
+    </footer>
+
+    </html>

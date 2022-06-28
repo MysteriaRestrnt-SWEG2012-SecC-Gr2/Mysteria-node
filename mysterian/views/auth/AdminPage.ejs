@@ -1,0 +1,56 @@
+<%- include('./partials/header'); -%>
+    <%- include('./partials/navigation'); -%>
+        <header class="header">
+            <div class="headerNav" style="margin-left: 5%;">
+                <a href="AdminPage.php">Home</a>
+                <a href="../public/home/home.php">Mysteria site</a>
+                <a href="../public/import.php">Import</a>
+                <a href="adminAddForm.php">Add admin</a>
+                <a href="try.php">Report</a>
+                <a href="FoodAddForm.php">Add Menu</a>
+                <a href="../shared/logout.php">Log Out </a>
+                <form id="srchform" role="search">
+                    <input type="search" id="query" name="q" placeholder="Search" aria-label="search through site content">
+                    <button id="srchbtn" type="submit"><img id="srchimg" src="../../public/images/searchwhite.png"></button>
+                </form>
+            </div>
+            <div>
+                <label>
+            </label>
+            </div>
+        </header>
+        <div class="container">
+            <div class="wrapper">
+                <h1>Report</h1>
+            </div>
+            <div class="data">
+                <form action="AdminPage.php" method="GET">
+                    <div id="repoForm">
+                        <label id="select">Generate Report From</label>
+                        <select id="category" name="category">
+                                <option  value="delivery">delivery</option>
+                                <option  value="feedback">feedback</option>
+                                <option  value="ingredient">ingredient</option>
+                                <option  value="ordersfood">ordersfood</option>
+                                <option  value="registration">registration</option>
+                                <option  value="reservation">reservation</option>
+                                <option  value="tablereservation">table reservation</option>
+                        </select>
+                        <input type="submit" name="submit" value="Submit" class="btns" id="subbtn">
+                    </div>
+
+
+                </form>
+
+
+                <table class="tab3">
+                    <form action="csv2.php" method="GET">
+                        <tr>
+                            <th> <input type="submit" name="submit2" value="Export" class="btn3"></th>
+                        </tr>
+                    </form>
+
+                </table>
+            </div>
+        </div>
+        <%- include('./partials/footer'); -%>

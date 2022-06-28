@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-
+var flash = require('express-flash')
 var conn = require('./config/db_Connection');
 
 
@@ -16,7 +16,7 @@ app.use(session({
 
 const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
-
+app.use(flash());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
@@ -25,20 +25,19 @@ console.log(__dirname);
 app.set('view engine', 'ejs');
 
 app.use('/', require('./routes/pages'));
-//app.use('/addfood', require('./routes/pages'));
+app.use('/', require('./routes/authenticate-user'));
+
 //app.use('/auth', require('./routes/auth'));
 
 var registrationRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
-var foodRouter = require('./routes/newmenu');
-var dashboardRouter = require('./routes/home');
-var logoutRouter = require('./routes/logout');
+//var dashboardRouter = require('./routes/dashboard-route');
+//var logoutRouter = require('./routes/logout-route');
 app.use('/', registrationRouter);
 app.use('/', loginRouter);
-app.use('/', foodRouter);
-app.use('/', dashboardRouter);
-app.use('/', logoutRouter);
+//app.use('/', dashboardRouter);
+//app.use('/', logoutRouter);
 
 app.listen(5500, () => {
-    console.log("run");
+    console.log("SERVER PORT: 5500");
 });
