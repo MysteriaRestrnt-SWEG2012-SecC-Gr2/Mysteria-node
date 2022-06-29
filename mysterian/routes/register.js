@@ -30,13 +30,17 @@ router.post('/register', function(req, res, next) {
         } else {
 
             // save users data into database
-            let hashedpassword = await bcrypt.hash(inputData.password, 8);
-            // console.log(hashedpassword);
+
+
+
+            let salt = bcrypt.genSaltSync(10);
+            let hash = bcrypt.hashSync(inputData.password, salt);
+            console.log(hash);
 
             const token = randtoken.generate(20);
             const sent = sendMail.sendingMail(inputData.email, token);
 
-            db.query('INSERT INTO registration SET ?', { username: inputData.username, email: inputData.email, password: inputData.password }, (error, results) => {
+            db.query('INSERT INTO registration SET ?', { username: inputData.username, email: inputData.email, password: hash }, (error, results) => {
                 if (error) {
                     console.log(error);
                 }

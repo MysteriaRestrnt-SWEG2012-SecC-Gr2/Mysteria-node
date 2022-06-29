@@ -14,8 +14,10 @@ app.use(session({
     cookie: { maxAge: 60000 }
 }))
 
-const publicDirectory = path.join(__dirname, './public');
-app.use(express.static(publicDirectory));
+// const publicDirectory = path.join(__dirname, './public');
+// app.use(express.static(publicDirectory));
+app.use('/public', express.static(path.join(__dirname, "public")));
+
 app.use(flash());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
