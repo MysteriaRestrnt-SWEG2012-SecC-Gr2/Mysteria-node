@@ -26,7 +26,7 @@ exports.form = [
     .not().matches(/^$|\s+/).withMessage('White space not allowed'),
 
     // confirm password validation
-    check('Password2').custom((value, { req }) => {
+    check('password2').custom((value, { req }) => {
         if (value !== req.body.password) {
             throw new Error('Password Confirmation does not match password');
         }

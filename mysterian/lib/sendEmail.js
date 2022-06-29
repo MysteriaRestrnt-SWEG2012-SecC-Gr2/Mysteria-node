@@ -1,11 +1,11 @@
 var nodemailer = require('nodemailer');
 
 //send email
-exports.sendingMail = (email, token)=> {
-	
+exports.sendingMail = (email, token) => {
+
     var email = email;
     var token = token;
-	
+
     var mail = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -13,24 +13,23 @@ exports.sendingMail = (email, token)=> {
             pass: 'zfahqguufmkoznks' // Your password
         }
     });
- 
+
     var mailOptions = {
         from: 'restaurantmysteria@gmail.com',
         to: email,
         subject: 'Mysteria Restaurant Registration Link',
-        html: '<p>You requested for registration to our website, kindly use this' +  
-			'<a href="http://localhost:5500/auth/signup"?token=' + token + '>' +
-			' link</a> to confirm your registration</p>'
+        html: '<p>You requested for registration to our website, kindly use this' +
+            '<a href="http://localhost:5500"?token=' + token + '>' +
+            ' link</a> to confirm your registration</p>'
     };
- 
+
     mail.sendMail(mailOptions, function(error, info) {
         if (!error)
-            console.log('registration link sent')       
-		else 
-			console.log ('Error: link not sent')			
+            console.log('registration link sent')
+        else
+            console.log('Error: link not sent')
     });
 
-    
-	
-}
 
+
+}

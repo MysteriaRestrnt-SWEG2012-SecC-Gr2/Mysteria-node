@@ -1,5 +1,5 @@
 const express = require("express");
-
+const validator = require('../lib/validation-rules@alternate example')
 const router = express.Router();
 const {
     importRecordPage,
@@ -31,7 +31,5 @@ router.get('/home', isLoggedin, (req, res) => {
 router.get('/pages/importCSV', isLoggedin, (req, res) => {
     res.render('pages/importCSV');
 });
-
-
-
+router.get('/register', isLoggedin, validator.form);
 module.exports = router;
