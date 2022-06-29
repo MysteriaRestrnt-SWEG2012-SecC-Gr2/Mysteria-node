@@ -8,7 +8,7 @@ exports.encryptPassword = async(password) => {
 
 exports.matchPassword = async(password, savedPassword) => {
     try {
-
+        console.log(await bcrypt.compareSync(password, savedPassword));
         return await bcrypt.compareSync(password, savedPassword);
     } catch (e) {
         console.log(e);

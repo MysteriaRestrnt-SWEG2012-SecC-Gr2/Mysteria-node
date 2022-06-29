@@ -7,7 +7,7 @@ var db = require('../config/db_Connection');
 router.get('/login', function(req, res, next) {
     res.render('index');
 });
-router.post('/routes/login', async(req, res) => {
+router.post('/login', async(req, res) => {
     var username = req.body.username;
     var password = req.body.password;
     var sql = 'SELECT * FROM registration WHERE username =?';
@@ -27,7 +27,7 @@ router.post('/routes/login', async(req, res) => {
 
             const checkPass = encrypt.matchPassword(password, row[0].password);
 
-            if (checkPass === true) {
+            if (checkPass) {
                 req.session.userID = row[0].user_id;
                 req.session.username = row[0].username;
                 req.session.email = row[0].email;

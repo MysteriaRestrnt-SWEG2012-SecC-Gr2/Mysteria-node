@@ -18,17 +18,17 @@ const {
 
 const { isLoggedin, isNotLoggedin } = require('../lib/check_authentication');
 
-router.get('/pages/download', downloadFile);
-router.post('/pages/importCSV', importRecord);
+router.get('/pages/download', isLoggedin, downloadFile);
+router.post('/pages/importCSV', isLoggedin, importRecord);
 
 router.get('/', (req, res) => {
     res.render('index');
 });
 
-router.get('/home', (req, res) => {
+router.get('/home', isLoggedin, (req, res) => {
     res.render('home');
 });
-router.get('/pages/importCSV', (req, res) => {
+router.get('/pages/importCSV', isLoggedin, (req, res) => {
     res.render('pages/importCSV');
 });
 
