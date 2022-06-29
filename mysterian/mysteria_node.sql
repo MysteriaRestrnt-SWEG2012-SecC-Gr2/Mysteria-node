@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2022 at 03:56 AM
+-- Generation Time: Jun 29, 2022 at 07:32 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -134,33 +134,7 @@ INSERT INTO `registration` (`user_id`, `username`, `email`, `password`) VALUES
 (2, 'yyy', 'rberhane383@gmail.com', '$2a$10$0pSMGZyz2/VT1GzC/0DLa.B.5Fw7lBnAklg2yuCv3Cz930rpzE.oa'),
 (3, 'in', 'rberhane383@gmail.com', '$2a$10$0pSMGZyz2/VT1GzC/0DLa.B.5Fw7lBnAklg2yuCv3Cz930rpzE.oa'),
 (11, 'pt', 'paulman7792@gmail.com', '$2a$10$0pSMGZyz2/VT1GzC/0DLa.B.5Fw7lBnAklg2yuCv3Cz930rpzE.oa'),
-(12, 'paulos', 'paulman7792@gmail.com', '$2a$10$0k5WXEru.OzzJk3a.PJGIuMUq9FM2emynNLicXB93b5xdFWk24Jy.');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `user_id` int(10) UNSIGNED NOT NULL,
-  `fname` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `lname` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `gender` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `level` int(11) NOT NULL DEFAULT 0,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`user_id`, `fname`, `lname`, `gender`, `email`, `password`, `level`, `token`) VALUES
-(10, 'Chere', 'Lemma', 'Male', 'chere.lemma@aastu.edu.et', '$2a$10$YyVz7JfNu.laUR37p5sEzOXr6oIp0etJlvE3GIjDuHeKnYaHYUCam', 1, 'T2v5b8g7QpT4nwvcKXRb'),
-(13, 'Yared', 'Tassew', 'Male', 'yared.tassew@aastu.edu.et', '$2a$10$J.lYwYZ26R1cbLRyP8X7H.4LQ.a0kxZ1WRP46mCwg2Z3yiyzPM9P.', 0, NULL),
-(18, 'de', 're', 'Female', 'rberhane383@gmail.com', '$2a$10$SZwrsD50mDVWS8sRxaMZ8OWCkeamY8G8GTS2MyQKaNBA9VQ5ImByS', 0, NULL);
+(14, 'paulos', 'paulman7792@gmail.com', '$2a$10$7agboO8WQThx1B1ivJ8T7upzMItix6PLrpwDfu/Yuu1y/BnUHT8ma');
 
 --
 -- Indexes for dumped tables
@@ -180,13 +154,6 @@ ALTER TABLE `registration`
   ADD UNIQUE KEY `username` (`username`);
 
 --
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -200,13 +167,7 @@ ALTER TABLE `food_menu`
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
