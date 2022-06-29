@@ -1,4 +1,4 @@
-code,title,description,category,certificate,duration,cost,imagePath
-BW634x,Basics of Web Design,Backend development is one of the web development skills required by the Software Eng.,Web Development,Course completion,2,220,None
-UI568x,Software UI/Ux Design,This site canâ€™t be reached,Management,Participation Certificate,1,320,None
-PY5214x,Python for AI,Connect-flash module for Node. js is a web development framework,Web Development,Course completion,3,210,None
+food_name,food_category,imagePath,ingredients,price,date_added,quantity
+Alcha wot,Vegetarian,None,"Frozen Meatballs, Grape Jelly, Chili Sauce",200,  2022-04-11,20
+Minchet,Meatatarian,None,"Fresh Strawberries, Plum tomatoes, Red onion, Jala…",100,  2022-04-11,20
+kurt,Meatatarian,None,"Ripe Avocadoes, Red onion, Tomatoes, Jalapeno pepp",300,  2022-04-11,10
